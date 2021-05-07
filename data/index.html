@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Required Data - MKLorumm</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../Stylesheets/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Required Data";
+    var mkdocs_page_input_path = "data.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> MKLorumm</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Basics</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../python/">Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../functions/">Required Functions</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Required Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#subdirectories-for-data-used">Subdirectories for data used</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data">Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#-element-subdirectories">-Element subdirectories</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#format_csvs">Format_csvs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#-matrixele">-MatrixEle</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-transitionrates">-TransitionRates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#-all_states">-All_states</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-otherdata">-OtherData</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#elementshtmls">ElementsHTMLS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#experimental_data">Experimental_Data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#otherdata">OtherData</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Example</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../BaII_html/">Ba<sup>+</sup> TR, ME, HTMLs generation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Cs_other/">Cs Other HTML generation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../master/">All HTMLs generation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../videos/">Video guide</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Explanations</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../explain.md">functions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About the Team</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MKLorumm</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Setup &raquo;</li>
+        
+      
+    
+    <li>Required Data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation">Installation</h1>
+<h2 id="subdirectories-for-data-used">Subdirectories for data used</h2>
+<p>All data folders need to be in the same directory as the codes are. The folders at this level are:</p>
+<ul>
+<li>Data</li>
+<li>ElementsHTMLS</li>
+<li>Experimental_Data</li>
+<li>Format_csvs</li>
+<li>OtherData</li>
+</ul>
+
+<h2 id="data">Data</h2>
+<p>Folder contains energies and Fortran77 values (transition rates, errors, matrix elements, etc.)</p>
+<p>Files are:</p>
+<ul>
+<li>nist_urls.csv</li>
+</ul>
+<p>All other files are stored in their own folder in the Data directory.</p>
+<h3 id="-element-subdirectories">-Element subdirectories</h3>
+<p>Every element needs its own sub-folder, named in this convention: "Cs", "BaII", "Fr". These are located in "Data" as subdirectories.</p>
+<p>Using BaII as an example, the folder should have these files:</p>
+<ul>
+<li>databaseBaII.txt</li>
+<li>datapolBaII.txt</li>
+<li>rates1.txt</li>
+<li>rates2.txt</li>
+<li>replace.txt</li>
+<li>summary_rates.txt</li>
+</ul>
+
+<h2 id="format_csvs">Format_csvs</h2>
+<p>These folders store the styling for the various HTML pages. These stylings are split into the intro formatting, formatting in-between data tables, and the
+formatting at the end.</p>
+<p>Folders are:</p>
+<ul>
+<li>MatrixEle</li>
+<li>TransitionRates</li>
+<li>OtherData</li>
+</ul>
+
+<h3 id="-matrixele">-MatrixEle</h3>
+<p>This houses the formatting for the matrix element (Ra.html).</p>
+<p>Files are (Using Ra as example):</p>
+<ul>
+<li>Intro_to_excel_formatting.txt</li>
+<li>Excel_to_main_formatting.txt</li>
+<li>End_formatting.txt</li>
+<li>RaIIMatButtons.txt</li>
+</ul>
+<p>Every element needs its own MatButtons.txt file. The intro and ending html is the same for these files, but the specific list of buttons is uinque to each element and has to be
+manually put in. There is only one file each for the intro, excel_to_main, and End formattings. Changing one of these will change the format for every matrix element page.</p>
+<h3 id="-transitionrates">-TransitionRates</h3>
+<p>This houses the formatting for the transition rates (BeTranAuto.html) pages.</p>
+<p>Files are (Using Be as example):</p>
+<ul>
+<li>Intro_to_life_formatting.txt</li>
+<li>Life_to_excel_formatting.txt</li>
+<li>Excel_to_main_formatting.txt</li>
+<li>End_formatting.txt</li>
+<li>BeIIButtonList.txt</li>
+</ul>
+<p>This follows the same format and guidelines as MatrixEle files.</p>
+<p>Folders used:</p>
+<ul>
+<li>All_states</li>
+</ul>
+
+<h4 id="-all_states">-All_states</h4>
+<p>This houses the formatting for the page that displays all transition rates at once (BeTranFull.html).</p>
+<p>Files are:</p>
+<ul>
+<li>Intro_to_table_formatting.txt</li>
+<li>End_formatting.txt</li>
+</ul>
+
+<h3 id="-otherdata">-OtherData</h3>
+<p>This houses the formatting for the OtherData (CsOther.html) pages.</p>
+<p>Files are:</p>
+<ul>
+<li>Intro_to_nuclear.txt</li>
+<li>Nuclear_to_hyperfine.txt</li>
+<li>Hyperfine_to_metastable1.txt</li>
+<li>Hyperfine_to_metastableNoExp.txt</li>
+<li>Metastable1_to_2.txt</li>
+<li>End_formatting.txt</li>
+</ul>
+<p>These pages have more tables, which splits the formatting further. The Hyperfine_to_metastableNoExp is used in place of Hyperfine_to_metastable1
+only when an element does not have a second metastable data table.</p>
+<h2 id="elementshtmls">ElementsHTMLS</h2>
+<p>This is the folder where all the HTML files are saved to. There are saved in the format (using "Fr" as an example):</p>
+<ul>
+<li>Fr.html</li>
+<li>FrTranAuto.html</li>
+<li>FrTranFull.html</li>
+<li>FrOther.html</li>
+</ul>
+
+<p>for the matrix elements, transition rates, "all" page for transition rates, and other data pages respectively. Ions are saved in "CaII" format.  </p>
+<h2 id="experimental_data">Experimental_Data</h2>
+<p>Files, using "Ca" as example:</p>
+<ul>
+<li>Ca+-lifetimes.csv</li>
+<li>Ca+-matrix-elements.csv</li>
+<li>Key-File.csv</li>
+</ul>
+
+<p>Key file contains references with key and DOI. Need to have lifetimes and matrix element file for every element with experimental values.</p>
+<h2 id="otherdata">OtherData</h2>
+<p>Files, using "Ba" as example:</p>
+<ul>
+<li>Metastable_elements.txt</li>
+<li>Metastable_key.xlsx</li>
+<li>KEY-hyperfine.xlsx</li>
+<li>Nuclear-data.xlsx</li>
+<li>BaII_Metastable_csv.csv</li>
+<li>Ba+_hyperfine.xlsx</li>
+</ul>
+
+<p>Metastable_elements is a manually generated txt file with a list of elements with metastable properties.<br />
+Metastable key has references, keys, and DOIs.Key-hyperfine has references, keys, DOIs. <br />
+Metastable_csv files were manually created: opened original metastable .xlsx file, saved the different elements
+in that excel file to their own csv file. <br />
+Future versions could potentially have excel not joined together at creation, removing need for this.
+Ion hyperfine files have '+' format instead of 'II' format.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../BaII_html/" class="btn btn-neutral float-right" title="Ba<sup>+</sup> TR, ME, HTMLs generation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../functions/" class="btn btn-neutral" title="Required Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../functions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../BaII_html/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
