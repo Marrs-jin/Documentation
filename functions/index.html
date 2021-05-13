@@ -63,6 +63,8 @@
     </li>
     </ul>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../flowchart/">Flowchart</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../data/">Required Data</a>
                     </li>
                 </ul>
@@ -73,6 +75,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../Cs_other/">Cs Other HTML generation</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../master/">All HTMLs generation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../upload/">Uploading to Site</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../videos/">Video guide</a>
                     </li>
@@ -125,7 +129,11 @@
               
                 <h1 id="necessary-scripts">Necessary scripts</h1>
 <h2 id="codes">Codes</h2>
-<p>All the codes can be found at <pre><code><a href="https://github.com/Marrs-jin/WebDesign2">https://github.com/Marrs-jin/WebDesign2</a> </pre></code>
+<p>All the codes can be found at <pre><code><a href="https://github.com/Marrs-jin/WebDesign2">https://github.com/Marrs-jin/WebDesign2</a> </pre></code></p>
+<p>To generate the HTML files for "transition rates" and "matrix elements" pages for a single element, the only code that will be run by the user is TransitionManualInput.py. This code pulls in several other codes as it is running.</p>
+<p>To generate the HTML file for the "other data" page for a single element, the only code that will be run by the user is OtherData.py. This code pulls in several other codes as it is running.</p>
+<p>To generate the HTML files for "transition rates", "matrix elements", and "other data" pages for all elements, the only code that will be run by the user is Master1.py. This code pulls in several other codes as it is running.</p>
+<p>A full list of all Python scripts that will be needed for the functionality of making any HTML page is provided below.
 Necessary scripts:</p>
 <ul>
 <li>TransitionManualInput.py</li>
@@ -138,7 +146,11 @@ Necessary scripts:</p>
 <li>Master1.py</li>
 </ul>
 
-<p>To use jupyter notebook functionality the .ipynb versions of the above codes is necessary. I.e. 'TransitionManualInput.ipynb'</p>
+<p>Running these codes is possible through the Ipython command in the command line, e.g. <pre><code>ipython TransitionManualInput.py</pre></code>  </p>
+<p>Users also have the option to run codes using the Jupyter Notebook interactive environment. In this case the files have the same names but the extension .ipynb replaces .py. For example
+"TransitionManualInput.ipynb".</p>
+<p>These codes are run after entering the Jupyter shell through the <pre><code>jupyter notebook</pre></code>  command, navigating to the script you wish to run, and running all cells. See the examples
+for more information.</p>
               
             </div>
           </div>
@@ -146,7 +158,7 @@ Necessary scripts:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data/" class="btn btn-neutral float-right" title="Required Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../flowchart/" class="btn btn-neutral float-right" title="Flowchart">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../python/" class="btn btn-neutral" title="Python"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -178,7 +190,7 @@ Necessary scripts:</p>
         <span><a href="../python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../data/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../flowchart/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
