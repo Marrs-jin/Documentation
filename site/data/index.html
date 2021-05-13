@@ -59,27 +59,29 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../functions/">Required Functions</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../flowchart/">Flowchart</a>
+                    </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Required Data</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#subdirectories-for-data-used">Subdirectories for data used</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#data">Data</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#-element-subdirectories">-Element subdirectories</a>
+    <li class="toctree-l3"><a class="reference internal" href="#-element-subdirectories-databaii">-Element subdirectories ("Data/BaII")</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#format_csvs">Format_csvs</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#-matrixele">-MatrixEle</a>
+    <li class="toctree-l3"><a class="reference internal" href="#-matrixele-format_csvsmatrixele">-MatrixEle ("Format_csvs/MatrixEle")</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#-transitionrates">-TransitionRates</a>
+    <li class="toctree-l3"><a class="reference internal" href="#-transitionrates-format_csvstranstionrates">-TransitionRates ("Format_csvs/TranstionRates")</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#-all_states">-All_states</a>
+    <li class="toctree-l4"><a class="reference internal" href="#-all_states-format_csvstransitionratesall_states">-All_states ("Format_csvs/TransitionRates/All_states")</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#-otherdata">-OtherData</a>
+    <li class="toctree-l3"><a class="reference internal" href="#-otherdata-transitionratesotherdata">-OtherData ("TransitionRates/OtherData")</a>
     </li>
         </ul>
     </li>
@@ -99,6 +101,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../Cs_other/">Cs Other HTML generation</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../master/">All HTMLs generation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../upload/">Uploading to Site</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../videos/">Video guide</a>
                     </li>
@@ -149,7 +153,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="installation">Installation</h1>
+                <h1 id="location">Location</h1>
+<p>Data are generated through a variety of sources and stored in several folders. These folders are located in the same directory that all the Python scripts are saved at.</p>
 <h2 id="subdirectories-for-data-used">Subdirectories for data used</h2>
 <p>All data folders need to be in the same directory as the codes are. The folders at this level are:</p>
 <ul>
@@ -160,49 +165,71 @@
 <li>OtherData</li>
 </ul>
 
+<p><strong>Data</strong> stores the energy values and matrix elements used to calculate the transition rates for every element. Specific data for each element are
+stored in a subdirectory in Data named after the element, for example "Data/Cs"</p>
+<p><strong>ElementsHTMLS</strong> is the folder the final HTML files are saved in.</p>
+<p><strong>Experimental_Data</strong> has the manually generated experimental data values for every element. Also included are the reference key files.</p>
+<p><strong>Format_csvs</strong> has the HTML stylings and button lists for the HTML pages. These are split into subdirectories based on the type of page, for example
+"MatrixEle" or "OtherData".</p>
+<p><strong>OtherData</strong> has the metastable, hyperfine, and nuclear data for all elements. Also included are the reference key files. Note that metastable states have
+to be saved in an excel file unique to the element as opposed to a combined file.</p>
 <h2 id="data">Data</h2>
-<p>Folder contains energies and Fortran77 values (transition rates, errors, matrix elements, etc.)</p>
+<p>Folder contains nist_urls.csv, which stores the URLs for the NIST page of the element. These URLs are used in the "ASD" button on the HTML page.</p>
 <p>Files are:</p>
 <ul>
 <li>nist_urls.csv</li>
 </ul>
-<p>All other files are stored in their own folder in the Data directory.</p>
-<h3 id="-element-subdirectories">-Element subdirectories</h3>
-<p>Every element needs its own sub-folder, named in this convention: "Cs", "BaII", "Fr". These are located in "Data" as subdirectories.</p>
-<p>Using BaII as an example, the folder should have these files:</p>
+
+<p>Energies and matrix elements values are stored in folders within the Data folder named after the element in use, i.e. "Cs" or "BaII".</p>
+<h3 id="-element-subdirectories-databaii">-Element subdirectories ("Data/BaII")</h3>
+<p>Every element needs its own sub-folder, named in this convention: "Cs", "BaII", "Fr". These are located in "Data" as subdirectories.
+These folders need three files: datapol, rates1, and rates2.</p>
+<p>Using BaII as an example, the folder should have these files in this naming convention:</p>
 <ul>
-<li>databaseBaII.txt</li>
 <li>datapolBaII.txt</li>
 <li>rates1.txt</li>
 <li>rates2.txt</li>
-<li>replace.txt</li>
-<li>summary_rates.txt</li>
 </ul>
 
+<p><strong>datapol</strong> has the matrix element values, wavelengths, and errors. This is used to calculate transition properties.</p>
+<p><strong>rates1</strong> has the transition rates, branching ratios, etc. with their errors. This is used in comparison with the Python code to calculate errors to ensure the same result was obtained.</p>
+<p><strong>rates2</strong> has the lifetimes with errors. This is used in comparison with the Python code to calculate errors to ensure the same result was obtained.</p>
 <h2 id="format_csvs">Format_csvs</h2>
-<p>These folders store the styling for the various HTML pages. These stylings are split into the intro formatting, formatting in-between data tables, and the
-formatting at the end.</p>
-<p>Folders are:</p>
+<p>These folders store the styling for the various HTML pages. Each type of page (transition rate, matrix element, page with all the transition rates, other data) has its own
+unique styling. These stylings are stored in separate folders.</p>
+<p>Stylings are split within a folder. For example, there is an "intro_formatting" for most pages that covers the read in of required libraries and any formatting before data tables.</p>
+<p>There is often styling in-between data tables, which is also saved as a separate txt files.</p>
+<p>Pages also have an "End_formatting" or similar file that controls any javascript functions used and any formatting after all tabular data is saved.</p>
+<p>The sub-folders these styles are saved in are listed below.
+Folders are:</p>
 <ul>
 <li>MatrixEle</li>
 <li>TransitionRates</li>
 <li>OtherData</li>
 </ul>
 
-<h3 id="-matrixele">-MatrixEle</h3>
-<p>This houses the formatting for the matrix element (Ra.html).</p>
-<p>Files are (Using Ra as example):</p>
+<p>Descriptions for these folders are given below.</p>
+<h3 id="-matrixele-format_csvsmatrixele">-MatrixEle ("Format_csvs/MatrixEle")</h3>
+<p>This houses the formatting for the matrix element HTML pages. Matrix element pages are saved in the format Ra.html, CaII.html.</p>
+<p>There are four necessary files for matrix element styling.
+These files are (Using Ra as example):</p>
 <ul>
 <li>Intro_to_excel_formatting.txt</li>
 <li>Excel_to_main_formatting.txt</li>
 <li>End_formatting.txt</li>
 <li>RaIIMatButtons.txt</li>
 </ul>
-<p>Every element needs its own MatButtons.txt file. The intro and ending html is the same for these files, but the specific list of buttons is uinque to each element and has to be
-manually put in. There is only one file each for the intro, excel_to_main, and End formattings. Changing one of these will change the format for every matrix element page.</p>
-<h3 id="-transitionrates">-TransitionRates</h3>
-<p>This houses the formatting for the transition rates (BeTranAuto.html) pages.</p>
-<p>Files are (Using Be as example):</p>
+
+<p><strong>Intro_to_excel_formatting</strong> loads in bootstrap (default styles) libraries, css styles, and function libraries. It also has all the styling before data tables are loaded in, which includes the
+menu bar and the list of buttons among other things.</p>
+<p>The <strong>Excel_to_main_formatting</strong> controls the styling in-between the data table that is downloaded on the "excel" button click and the data table that is shown on the portal.</p>
+<p><strong>End_formatting</strong> controls the styling to close the HTML file as well as functions for sorting on button clicks.</p>
+<p><strong>RaIIMatButtons</strong> is the unique list of buttons for the Ra<sup>+</sup> matrix element page. Every element loads in the same Intro_to_excel_formatting, Excel_to_main_formatting, and End_formatting files, but has their own MatButtons txt file.</p>
+<p>If a user wishes to change the way the matrix elements pages look, they should change one of these files (excluding the MatButtons file). Any change in one of these files will affect the matrix elements HTML pages for every element, and may require changes in the string substitution section of TransitionManualInput.py. See code explanations for more detail.</p>
+<h3 id="-transitionrates-format_csvstranstionrates">-TransitionRates ("Format_csvs/TranstionRates")</h3>
+<p>This houses the formatting for the transition rates HTML pages. Transition rates pages are saved in the format FrTranAuto.html, BeIITranAuto.html.</p>
+<p>There are five necessary files for a single element's transtition rate styling.
+These files are (Using Be as example):</p>
 <ul>
 <li>Intro_to_life_formatting.txt</li>
 <li>Life_to_excel_formatting.txt</li>
@@ -211,22 +238,33 @@ manually put in. There is only one file each for the intro, excel_to_main, and E
 <li>BeIIButtonList.txt</li>
 </ul>
 <p>This follows the same format and guidelines as MatrixEle files.</p>
+<p><strong>Life_to_excel_formatting</strong> controls the styling between the lifetime data table and the data table downloaded after clicking "excel".</p>
+<p><strong>Excel_to_main_formatting</strong> controls the styling in-between the data table that is downloaded on the "excel" button click and the data table that is shown on the portal.</p>
+<p>The <strong>ButtonList</strong> needed for an element on its transition rates page is different than the button list needed for its matrix elements page, so a different txt file is necessary.</p>
+<p>If a user wishes to change the way the transition rate pages look, they should change one of these files (excluding the ButtonList file). Any change in one of these files will affect the transition rates HTML pages for every element, and may require changes in the string substitution section of TransitionManualInput.py. See code explanations for more detail.</p>
+<p>There is a sub-folder in this folder that houses the styling files for the "all" page of transition rates. The "all" page is the HTML file that is displayed when a user clicks on
+the "all" button for some element's transition rates. This page has its own unique styling and is stored in its own folder.</p>
 <p>Folders used:</p>
 <ul>
 <li>All_states</li>
 </ul>
 
-<h4 id="-all_states">-All_states</h4>
-<p>This houses the formatting for the page that displays all transition rates at once (BeTranFull.html).</p>
-<p>Files are:</p>
+<h4 id="-all_states-format_csvstransitionratesall_states">-All_states ("Format_csvs/TransitionRates/All_states")</h4>
+<p>This houses the formatting for the pages that display all transition rates of an element at once. These pages are saved in the format BeIITranFull.html, LiTranFull.html.</p>
+<p>There are two necessary files for this styling, listed below. There are no element-unique files for the "all" states since no button list is used.</p>
+<p>Files necessary are:</p>
 <ul>
 <li>Intro_to_table_formatting.txt</li>
 <li>End_formatting.txt</li>
 </ul>
 
-<h3 id="-otherdata">-OtherData</h3>
-<p>This houses the formatting for the OtherData (CsOther.html) pages.</p>
-<p>Files are:</p>
+<p>These files follow the same usage as in the transition rate and matrix element pages.</p>
+<h3 id="-otherdata-transitionratesotherdata">-OtherData ("TransitionRates/OtherData")</h3>
+<p>This houses the formatting for the other data HTML page for an element. These pages are saved in the form NaOther.html, CaIIOther.html.
+There are more styling files in this folder due to the increased number of data tables. There is required formatting between the end of any one data table and
+the beginning of another.</p>
+<p>There are no styling files that are unique for an element- all elements share the same files.</p>
+<p>Necessary files are:</p>
 <ul>
 <li>Intro_to_nuclear.txt</li>
 <li>Nuclear_to_hyperfine.txt</li>
@@ -235,8 +273,13 @@ manually put in. There is only one file each for the intro, excel_to_main, and E
 <li>Metastable1_to_2.txt</li>
 <li>End_formatting.txt</li>
 </ul>
-<p>These pages have more tables, which splits the formatting further. The Hyperfine_to_metastableNoExp is used in place of Hyperfine_to_metastable1
-only when an element does not have a second metastable data table.</p>
+
+<p><strong>Intro_to_nuclear</strong> and <strong>End_formatting</strong> follow the same style as for matrix element and transition rate pages.</p>
+<p><strong>Nuclear_to_hyperfine</strong> has the styling between the nuclear data and the hyperfine constants A data.</p>
+<p><strong>Hyperfine_to_metastable1</strong> has the styling between the hyperfine data and the metastable data table with columns "State, Property, Theory, Experiment".</p>
+<p><strong>Metastable1_to_2</strong> has the styling between the metastable table listed above and the metastable table with columns "Initial, Final, Transition, Wavelength, Matrix element, Units,
+Transition rate, Branching ratio".</p>
+<p><strong>Hyperfine_to_metastableNoExp</strong> is used in place of Hyperfine_to_metastable1 only when an element does not have a second metastable data table.</p>
 <h2 id="elementshtmls">ElementsHTMLS</h2>
 <p>This is the folder where all the HTML files are saved to. There are saved in the format (using "Fr" as an example):</p>
 <ul>
@@ -246,7 +289,11 @@ only when an element does not have a second metastable data table.</p>
 <li>FrOther.html</li>
 </ul>
 
-<p>for the matrix elements, transition rates, "all" page for transition rates, and other data pages respectively. Ions are saved in "CaII" format.  </p>
+<p><strong>X.html</strong> is the matrix element page, where X is the element.</p>
+<p><strong>XTranAuto.html</strong> is the transition rate page with buttons for sorting which transitions are shown (the main transition rate page).</p>
+<p><strong>XTranFull.html</strong> is the transition rate page displayed when a user clicks the "all" button on a main transition rate page.</p>
+<p><strong>XOther.html</strong> is the other data page.</p>
+<p>Ions are saved in the format, using Ca<sup>+</sup> as an example, of: CaII.html, CaIITranAuto, etc.</p>
 <h2 id="experimental_data">Experimental_Data</h2>
 <p>Files, using "Ca" as example:</p>
 <ul>
@@ -283,7 +330,7 @@ Ion hyperfine files have '+' format instead of 'II' format.</p>
         <a href="../BaII_html/" class="btn btn-neutral float-right" title="Ba<sup>+</sup> TR, ME, HTMLs generation">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../functions/" class="btn btn-neutral" title="Required Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../flowchart/" class="btn btn-neutral" title="Flowchart"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -309,7 +356,7 @@ Ion hyperfine files have '+' format instead of 'II' format.</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../functions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../flowchart/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../BaII_html/" style="color: #fcfcfc">Next &raquo;</a></span>
