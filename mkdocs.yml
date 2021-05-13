@@ -1,0 +1,25 @@
+site_name: MKLorumm
+
+nav:
+  - Basics:
+    - Introduction: 'index.md'
+  - Setup:
+    - Python: 'python.md'
+    - Required Functions: 'functions.md'
+    - Flowchart: 'flowchart.md'
+    - Required Data: 'data.md'
+  - Example:
+    - Ba<sup>+</sup> TR, ME, HTMLs generation: 'BaII_html.md'
+    - Cs Other HTML generation: "Cs_other.md"
+    - All HTMLs generation: 'master.md'
+    - Uploading to Site: 'upload.md'
+    - Video guide: 'videos.md'
+  - Explanations:
+      - functions: 'explain.md'
+  - About:
+    - About the Team: "about.md"
+theme:
+  name: readthedocs
+
+extra_css:
+  - Stylesheets/extra.css
